@@ -12,4 +12,19 @@ angular.module('ecommerce').service('adminService', function($http){
     });
   };
 
+  this.getProducts = function (){
+    return $http({
+      method: 'GET',
+      url: '/products',
+    });
+  };
+
+  this.deleteProduct = function (id) {
+    console.log(id);
+    return $http({
+      method: 'DELETE',
+      url: '/products/'+id
+    });
+  };
+
 })

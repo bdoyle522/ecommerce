@@ -7,7 +7,7 @@ angular.module('ecommerce').controller('mainCtrl', function($scope, $state, main
       console.log(res);
       $scope.products = res.data;
     });
-  }
+  };
 
 
 

@@ -1,7 +1,20 @@
-<h1>Admin</h1>
+<div class="container">
+  <h1>Admin</h1>
 
-<div class="form-control">
-  <input type="text" placeholder="Product" ng-model="product" required/>
-  <input type="text" placeholder="Brand" ng-model="brand" required/>
-  <button ng-click="addProduct(product, brand)">Add Product</button>
+  <div class="form-control">
+    <div>
+      <input type="text" placeholder="Product" ng-model="product" required/>
+      <input type="text" placeholder="Brand" ng-model="brand" required/>
+      <button ng-click="addProduct(product, brand)">Add Product</button>
+    </div>
+  </div>
+
+  <div>
+    <button ng-click="getProducts()">Show Products</button>
+  </div>
+  <div ng-repeat="product in products">
+    {{product.name}} by {{product.brand}}
+    <button ng-click="delete(product)">Delete</button>
+  </div>
+
 </div>

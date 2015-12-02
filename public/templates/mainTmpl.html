@@ -1,8 +1,10 @@
-<h1>Main</h1>
+<div class="container">
+  <h1>Main</h1>
 
-<a ui-sref="admin">Admin Page</a>
-<div>
-  <button ng-click="getProducts()">Show Products</button>
+  <a ui-sref="admin">Admin Page</a>
+  <div>
+    <button ng-click="getProducts()">Show Products</button>
+  </div>
+
+  <div ng-repeat="product in products">{{product.name}} by {{product.brand}}</div>
 </div>
-
-<div ng-repeat="product in products">{{product.name}} by {{product.brand}}</div>
