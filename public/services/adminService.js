@@ -1,13 +1,14 @@
 angular.module('ecommerce').service('adminService', function($http){
 
 
-  this.addProduct = function (product, brand){
+  this.addProduct = function (product, brand, price){
     return $http({
       method: 'POST',
-      url: '/products',
+      url: '/api/products',
       data: {
-        "name": product,
-        "brand" : brand
+        "title": product,
+        "description" : brand,
+        "price": price
       }
     });
   };
@@ -15,7 +16,7 @@ angular.module('ecommerce').service('adminService', function($http){
   this.getProducts = function (){
     return $http({
       method: 'GET',
-      url: '/products',
+      url: '/api/products',
     });
   };
 
@@ -23,8 +24,15 @@ angular.module('ecommerce').service('adminService', function($http){
     console.log(id);
     return $http({
       method: 'DELETE',
-      url: '/products/'+id
+      url: '/api/products/'+id
     });
   };
 
-})
+  // this.editProduct = function(product, brand price){
+  //   return $http({
+  //     method: 'PUT',
+  //     url:'/api/products'+id
+  //   });
+  // };
+
+});

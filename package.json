@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "<img src=\"https://devmounta.in/img/logowhiteblue.png\" width=\"250\" align=\"right\">",
   "main": "server.js",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,11 +22,5 @@
   "bugs": {
     "url": "https://github.com/bdoyle522/ecommerce/issues"
   },
-  "homepage": "https://github.com/bdoyle522/ecommerce#readme",
-  "dependencies": {
-    "body-parser": "^1.14.1",
-    "cors": "^2.7.1",
-    "express": "^4.13.3",
-    "mongojs": "^1.4.1"
-  }
+  "homepage": "https://github.com/bdoyle522/ecommerce#readme"
 }

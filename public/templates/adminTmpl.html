@@ -3,9 +3,10 @@
 
   <div class="form-control">
     <div>
-      <input type="text" placeholder="Product" ng-model="product" required/>
-      <input type="text" placeholder="Brand" ng-model="brand" required/>
-      <button ng-click="addProduct(product, brand)">Add Product</button>
+      <input type="text" placeholder="Title" ng-model="product" required/>
+      <input type="text-box" placeholder="Description" ng-model="brand" required/>
+      <input type="text" placeholder="Price" ng-model="price" required/>
+      <button ng-click="addProduct(product, brand, price)">Add Product</button>
     </div>
   </div>
 
@@ -13,7 +14,7 @@
     <button ng-click="getProducts()">Show Products</button>
   </div>
   <div ng-repeat="product in products">
-    {{product.name}} by {{product.brand}}
+    {{product.title}}: {{product.description}} for ${{product.price}}
     <button ng-click="delete(product)">Delete</button>
   </div>
 
